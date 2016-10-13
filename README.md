@@ -1,8 +1,8 @@
 # RecyclerViewWithHeaderFooter
 recyclerview with header footer
 
-![image](https://github.com/ljl160139/RecyclerViewWithHeaderFooter-/blob/master/images/device-2016-10-13-160113.png)
-![image](https://github.com/ljl160139/RecyclerViewWithHeaderFooter-/blob/master/images/device-2016-10-13-160140.png)
+![image](https://github.com/ljl160139/RecyclerViewWithHeaderFooter-/blob/master/images/device-1.png)
+![image](https://github.com/ljl160139/RecyclerViewWithHeaderFooter-/blob/master/images/device-2.png)
 
 
 Use :
