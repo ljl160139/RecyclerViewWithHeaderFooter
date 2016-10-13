@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by kinglong on 16/10/12.
+ * Created by kl on 16/10/12.
  */
 
 public class RecvAdapter extends RecvHeaderFooterAdapter {
