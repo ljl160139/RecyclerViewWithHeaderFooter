@@ -52,7 +52,6 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
             holder.bindItem(holder, position-mHeaderViewList.size()-getCount());
         }else {
             final int norPossition=position-mHeaderViewList.size();
-            holder.bindItem(holder, norPossition);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -66,6 +65,7 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
                     return onItemLongClick(norPossition,holder.itemView);
                 }
             });
+            holder.bindItem(holder, norPossition);
         }
 
     }
