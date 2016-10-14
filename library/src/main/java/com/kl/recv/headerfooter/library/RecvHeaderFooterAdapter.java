@@ -12,7 +12,7 @@ import java.util.List;
  * Created by kl on 16/10/12.
  */
 
-public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvWithHeaderFooter.ExampleViewHolder> {
+public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvWithHeaderFooter.RecvHolder> {
 
     private final int HEADER_VIEW_TYPE = 579999999;
     private final int FOOTER_VIEW_TYPE = 579999998;
@@ -28,7 +28,7 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
     }
 
     @Override
-    public RecvWithHeaderFooter.ExampleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecvWithHeaderFooter.RecvHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == HEADER_VIEW_TYPE) {
             LinearLayout linearLayout = new LinearLayout(parent.getContext());
             linearLayout.setOrientation(LinearLayout.VERTICAL);
@@ -45,7 +45,7 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
     }
 
     @Override
-    public void onBindViewHolder(final RecvWithHeaderFooter.ExampleViewHolder holder, final int position) {
+    public void onBindViewHolder(final RecvWithHeaderFooter.RecvHolder holder, final int position) {
         if(HEADER_VIEW_TYPE==getItemViewType(position)){
             holder.bindItem(holder, position);
         }else if(FOOTER_VIEW_TYPE==getItemViewType(position)){
@@ -70,13 +70,13 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
 
     }
 
-    class HeaderViewHolder extends RecvWithHeaderFooter.ExampleViewHolder {
+    class HeaderViewHolder extends RecvWithHeaderFooter.RecvHolder {
         public HeaderViewHolder(View itemView, int viewType) {
             super(itemView, viewType);
         }
 
         @Override
-        public void bindItem(RecvWithHeaderFooter.ExampleViewHolder holder, int position) {
+        public void bindItem(RecvWithHeaderFooter.RecvHolder holder, int position) {
             LinearLayout container = (LinearLayout) holder.itemView;
             container.removeAllViews();
             if (null != mHeaderViewList.get(position).getParent()) {
@@ -87,13 +87,13 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
         }
     }
 
-    class FooterViewHolder extends RecvWithHeaderFooter.ExampleViewHolder {
+    class FooterViewHolder extends RecvWithHeaderFooter.RecvHolder {
         public FooterViewHolder(View itemView, int viewType) {
             super(itemView, viewType);
         }
 
         @Override
-        public void bindItem(RecvWithHeaderFooter.ExampleViewHolder holder, int position) {
+        public void bindItem(RecvWithHeaderFooter.RecvHolder holder, int position) {
             LinearLayout container = (LinearLayout) holder.itemView;
             container.removeAllViews();
             if (null != mFooterViewList.get(position).getParent()) {
@@ -156,7 +156,7 @@ public abstract class RecvHeaderFooterAdapter extends RecyclerView.Adapter<RecvW
         return 0;
     }
 
-    public abstract RecvWithHeaderFooter.ExampleViewHolder createHolder(ViewGroup parent, int viewType);
+    public abstract RecvWithHeaderFooter.RecvHolder createHolder(ViewGroup parent, int viewType);
 
     public abstract int getCount();
 

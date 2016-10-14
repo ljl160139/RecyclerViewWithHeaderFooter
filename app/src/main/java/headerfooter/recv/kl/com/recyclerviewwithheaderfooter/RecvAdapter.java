@@ -42,7 +42,7 @@ public class RecvAdapter extends RecvHeaderFooterAdapter {
     }
 
     @Override
-    public RecvWithHeaderFooter.ExampleViewHolder createHolder(ViewGroup parent, int viewType) {
+    public RecvWithHeaderFooter.RecvHolder createHolder(ViewGroup parent, int viewType) {
         if(viewType==TYPE_0){
             View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recv_header_footer_item_0,null);
             return new ViewHolder(view,viewType);
@@ -68,7 +68,7 @@ public class RecvAdapter extends RecvHeaderFooterAdapter {
         return mData.size();
     }
 
-    class ViewHolder extends RecvWithHeaderFooter.ExampleViewHolder{
+    class ViewHolder extends RecvWithHeaderFooter.RecvHolder {
         private TextView tv;
         public ViewHolder(View itemView,int viewType) {
             super(itemView,viewType);
@@ -76,7 +76,7 @@ public class RecvAdapter extends RecvHeaderFooterAdapter {
         }
 
         @Override
-        public void bindItem(RecvWithHeaderFooter.ExampleViewHolder holder, int position) {
+        public void bindItem(RecvWithHeaderFooter.RecvHolder holder, int position) {
            if(TYPE_0==getViewType(position)){
                 tv.setText("type0_"+mData.get(position));
             }else if(TYPE_1==getViewType(position)){

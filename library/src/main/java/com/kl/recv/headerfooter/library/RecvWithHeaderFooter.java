@@ -99,10 +99,10 @@ public class RecvWithHeaderFooter extends RecyclerView {
     }
 
 
-    public static abstract class ExampleViewHolder extends RecyclerView.ViewHolder {
-        public ExampleViewHolder(View itemView, int viewType) {
+    public static abstract class RecvHolder extends RecyclerView.ViewHolder {
+        public RecvHolder(View itemView, int viewType) {
             super(itemView);
         }
-        abstract public void bindItem(ExampleViewHolder holder, int position);
+        abstract public void bindItem(RecvHolder holder, int position);
     }
 }
